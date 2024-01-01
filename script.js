@@ -11,10 +11,10 @@ navigator.mediaDevices.getUserMedia({video:true})
 
 document.querySelector("button").addEventListener('click', () => {
     var canvas = document.querySelector("canvas");
-    canvas.height = video.height
-    canvas.width = video.width
+    canvas.height = video.videoHeight;
+    canvas.width = video.videoWidth;
     var context = canvas.getContext('2d');
-    context.drawImage(video, 0,0);
+    context.drawImage(video, 0, 0);
     var link = document.createElement('a');
     link.download = 'foto.png';
     link.href = canvas.toDataURL();
