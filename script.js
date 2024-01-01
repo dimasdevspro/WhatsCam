@@ -1,4 +1,4 @@
-var video = document.querySelector("video")
+var video = document.querySelector("video");
 
 navigator.mediaDevices.getUserMedia({video:true})
 .then(stream => {
@@ -17,7 +17,7 @@ document.querySelector("button").addEventListener('click', () => {
     context.drawImage(video, 0,0);
     var link = document.createElement('a');
     link.download = 'foto.png';
-    link.href = canvas.toDataURL;
+    link.href = canvas.toDataURL();
     link.textContent = 'Clique aqui para baixar a imagem';
     document.body.appendChild(link);
 })
